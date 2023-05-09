@@ -51,9 +51,83 @@ aside i.fa {
     padding: 5px 10px 0px;
 }
 
+li {
+    display: flex; /*targets each li containing the paragraphs*/
+    padding: 0 20px;
+    min-height: 50px;
+}
+
+li p {
+    flex: 0 0 25%; /*places space b/t each p within a li*/
+}
+
+li span.catty-cloud {
+    border: 1px solid black;
+    font-size: 0.6em;
+    padding: 4px;
+}
+
+li:nth-child(2n) {
+    background-color:#f2f2f2;
+}
+
+.catty-music {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    font-weight: 300;
+    color: #fff;
+    padding-left: 50px;
+}
+
+.catty-music div:nth-child(1) {
+    margin-bottom: auto;
+}
+
+.catty-music div:nth-child(2) {
+    margin-top: 0;
+}
+
+.catty-music div:nth-child(2) i.fa {
+    font-size: 0.9em;
+    padding: 0 0.7em;
+    font-weight: 300;
+}
+
+.catty-music div:nth-child(1) p:first-child {
+    font-size: 1.8em;
+    margin: 0 0 10px;
+}
+
+.catty-music div:nth-child(1) p:not(:first-child) {
+    font-size: 0.9em;
+    margin: 2px 0;
+}
+
 footer {
+    display: flex;
     flex: 0 0 90px; /*dont' grow or shrink - just stay at a height of 90px.*/
     padding: 10px;
     color: #fff;
     background-color: rgba(61, 100, 158, .9);
+}
+
+.current-song {
+    display: flex;
+    margin-right: auto;
+}
+
+.cattyboard-img-footer {
+    width: 70px;
+}
+
+.song-details {
+    margin-left: 20px;
+}
+
+.music-controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
 }
