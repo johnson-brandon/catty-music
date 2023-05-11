@@ -1,14 +1,18 @@
-html,
-body {
-    height: 100%;
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height:100%;
 }
 
 body {
     display: flex;
     flex-direction: column;
     background-color: #fff;
+    height: 100%;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Lato, sans-serif;
     color: #222;
     font-size: 0.9em;
 
@@ -32,20 +36,29 @@ aside i.fa {
     font-size: .9em;
 }
 
-.content {
+section.content {
     display: flex;
     flex: 1 0 auto; /*this makes sure the section grows to fill the available space*/
     flex-direction:column;
 }
 
-.music-head {
+section.content .music-head {
     display: flex;
     flex: 0 0 280px;
     padding: 40px;
     background-color: #4e4e4e;
 }
 
-.music-list {
+section.content .music-head .catty-music {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    color: #fff;
+    padding-left: 50px;
+}
+
+section.content .music-list {
     flex: 1 0 auto;
     list-style-type: none;
     padding: 5px 10px 0px;
@@ -130,4 +143,17 @@ footer {
     justify-content: space-around;
     align-items: center;
     width: 30%;
+}
+
+
+
+@media screen and (max-width: 769px) {
+    aside {
+        display:none;
+    }
+
+    .music-head {
+        flex-direction:column;
+        align-items:center
+    }
 }
